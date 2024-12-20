@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>register form</title>
+
+  <!--<link rel="stylesheet" href="/css/style.css">-->
+
+</head>
+
+<body> <!-- partial:index.partial.html -->
+
+<section> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+
+  <div class="signup">
+    <div class="content">
+      <h2>Registration</h2>
+      <h4>{{signUpMessage}}</h4>
+      <form class="form"  (ngSubmit)="register()">
+        <div class="inputBox">
+          <input type="text" [(ngModel)]="user.firstName" name="firstName" type="text" required> <i>Firstname</i>
+        </div>
+        <div class="inputBox">
+          <input type="text" [(ngModel)]="user.lastName" name="lastname" type="text" required> <i>Lastname</i>
+        </div>
+        <div class="inputBox">
+          <input type="email" [(ngModel)]="user.email" name="email" type="email" required> <i>Email</i>
+        </div>
+        <div class="inputBox">
+          <input type="password" [(ngModel)]="user.password" name="password"  required> <i>Password</i>
+        </div>
+        <div class="">
+          <h4>Select Roles: </h4>
+          <br>
+          <label class="lns-checkbox" style="color: #0f0;">
+            <input type="checkbox" [(ngModel)]="roles.ROLE_CLIENT" name="client" checked>
+            <label>Client</label>
+          </label> &nbsp;&nbsp;
+          <label class="lns-checkbox ml-2" style="color: #0f0;">
+            <input type="checkbox" [(ngModel)]="roles.ROLE_VENDEUR" name="vendeur">
+            <label>Vendeur</label>
+          </label> &nbsp;&nbsp;
+          <label class="lns-checkbox ml-2" style="color: #0f0;">
+            <input type="checkbox" [(ngModel)]="roles.ROLE_ADMIN" name="admin" disabled>
+            <label>Admin</label>
+          </label>
+        </div>
+        <div class="links"><a></a> <a href="/login">Sign In</a>
+        </div>
+        <div class="inputBox">
+          <input type="submit" value="register">
+        </div>
+      </form>
+
+    </div>
+
+  </div>
+
+</section> <!-- partial -->
+
+</body>
+
+</html>
